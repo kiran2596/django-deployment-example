@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/style.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container jumbotron">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="{% url 'index' %}">BRAND</a></li>
+            <li> <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+            <li> <a class="navbar-link" href="{% url 'basic_app:other' %}">other</a></li>
+        </ul>
+    </div>
+ 
+</nav>
+
+<div class="container">
+
+    {% block body_block %}
+    <!-- Anything outside of this will be inherited if you extend -->
+    {%  endblock %}
+</div>
+
+
+
+
+<!-- <script src="static/css_js/jquery-3.2.1.min.js"></script>
+<script src="static/css_js/popper.js"></script> -->
+<script src="http://127.0.0.1:8000/static/bootstrap.min.js"></script>     
+</body>
+</html>
